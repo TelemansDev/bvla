@@ -1,4 +1,4 @@
-# Browser vocabulary learning application (bvla)
+## Browser vocabulary learning application (bvla)
 
 ## License
 
