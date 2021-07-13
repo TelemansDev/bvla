@@ -8,7 +8,6 @@ class MainCategoriesSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('main_categories')->truncate();
         DB::table('main_categories')->insert(
             [
                 ['name' => 'Podstawy', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],

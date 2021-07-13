@@ -1,15 +1,19 @@
 @extends('layout.main')
 
 @section('content')
-    <h1>To jest strona startowa</h1>
-    <table class="table">
-        <tr>
-            <td>Lorem</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-        </tr>
-    </table>
+    <h1>Wszystkie kategorie</h1>
+    @foreach ($categories as $category)
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ $category->name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Zestawów: {{ $category->subcategories->count() }}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Słówek: </h6>
+                <a href="#" class="btn btn-primary btn-sm active text-center" role="button" aria-pressed="true">Wybierz</a>
+            </div>
+        </div>
+    @endforeach
 
+    <br>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title text-center">Podstawy</h5>
