@@ -10,10 +10,7 @@ use Illuminate\View\View;
 
 class HomeController extends Controller {
     public function index(): View {
-        $categories = MainCategory::all();
-        
-        //$category = MainCategory::find(1);
-        //dd($category->subcategories->count());
+        $categories = MainCategory::with('subcategories')->get();
 
         return view('home.main', [
             'categories' => $categories
