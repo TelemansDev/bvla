@@ -8,7 +8,6 @@ class SubcategoriesSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('subcategories')->truncate();
         DB::table('subcategories')->insert(
             [
                 ['name' => 'Dni tygodnia', 'main_category_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
