@@ -14,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Home\HomeController@index')->name('home.list');
+
+Route::get('/{categoryId}', 'Category\MainCategoryController@showSubcategories')->name('category.mainCategory.show');
+
+Route::get('/{categoryId}/{subcategoryId}', 'Category\SubcategoryController@showWords')->name('category.subcategory.show');
