@@ -10,4 +10,9 @@ class Subcategory extends Model
     public function mainCategory() {
         return $this->belongsTo(MainCategory::class);
     }
+
+    // 1:n
+    public function words() {
+        return $this->hasMany(Word::class);
+    }
 }

@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ $category->name }}</h4>
                         <h5 class="card-subtitle mb-2 text-muted">Zestawów: {{ $category->subcategories->count() }}</h5>
-                        <a href="{{ route('category.show', ['categoryId' => $category->id]) }}" class="btn btn-primary btn-m active text-center" role="button" aria-pressed="true">Wybierz</a>
+                        <a href="{{ route('category.mainCategory.show', ['categoryId' => $category->id]) }}" class="btn btn-primary btn-m active text-center" role="button" aria-pressed="true">Wybierz</a>
                     </div>
                 </div>
             </div>

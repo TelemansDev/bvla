@@ -9,10 +9,11 @@ use App\Models\MainCategory;
 use App\Models\Subcategory;
 use Illuminate\View\View;
 
-class MainCategoryController extends Controller {
+class MainCategoryController extends Controller 
+{
     public function showSubcategories(int $categoryId): View {
         $categoryName = MainCategory::findOrFail($categoryId)->name;
-        $subcategories = Subcategory::where('main_category_id', $categoryId)->get();
+        $subcategories = Subcategory::with('words')->where('main_category_id', $categoryId)->get();
 
         return View('category.mainCategory', [
             'categoryName' => $categoryName,
