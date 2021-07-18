@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Subcategory extends Model
 {
+    public function getRouteKeyName() {
+        return 'slug';
+    }
+
     // 1:1
     public function mainCategory() {
         return $this->belongsTo(MainCategory::class);

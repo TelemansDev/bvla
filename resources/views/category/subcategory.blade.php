@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <h1 class="pb-2 border-bottom"></h1>
+    <h1 class="pb-2 border-bottom">Kategoria: {{ $mainCategoryName }} / {{ $subcategoryName }}</h1>
     <table class="mt-3 table table-bordered table-striped">
         <thead>
             <tr>

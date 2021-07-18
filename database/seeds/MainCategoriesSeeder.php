@@ -10,12 +10,12 @@ class MainCategoriesSeeder extends Seeder
     {
         DB::table('main_categories')->insert(
             [
-                ['name' => 'Podstawy', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-                ['name' => 'Jedzenie', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-                ['name' => 'Sport', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-                ['name' => 'Szkoła', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-                ['name' => 'Transport', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-                ['name' => 'Zwierzęta', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
+                ['name' => 'Podstawy', 'slug' => 'podstawy', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Jedzenie', 'slug' => 'jedzenie', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Sport', 'slug' => 'sport', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Szkoła', 'slug' => 'szkola', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Transport', 'slug' => 'transport', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Zwierzęta', 'slug' => 'zwierzeta', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
             ]
         );       
     }

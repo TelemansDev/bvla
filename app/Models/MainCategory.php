@@ -9,6 +9,10 @@ class MainCategory extends Model
     // protected $table = 'main_categories';
     // SELECT m.name, COUNT(*) as podkategorie FROM `main_categories` as m INNER JOIN subcategories as s ON m.id = s.main_categorie_id GROUP BY s.main_categorie_id
     
+    public function getRouteKeyName() {
+        return 'slug';
+    }
+
     // 1:n
     public function subcategories() {
         return $this->hasMany(Subcategory::class);

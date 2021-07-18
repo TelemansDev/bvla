@@ -11,12 +11,14 @@ use Illuminate\View\View;
 
 class MainCategoryController extends Controller 
 {
-    public function showSubcategories(int $categoryId): View {
-        $categoryName = MainCategory::findOrFail($categoryId)->name;
-        $subcategories = Subcategory::with('words')->where('main_category_id', $categoryId)->get();
-
+    public function showSubcategories(MainCategory $mainCategory): View {
+        $mainCategoryName = $mainCategory->name;
+        $mainCategorySlug = $mainCategory->slug;
+        $subcategories = Subcategory::with('words')->where('main_category_id', $mainCategory->id)->get();
+        
         return View('category.mainCategory', [
-            'categoryName' => $categoryName,
+            'mainCategoryName' => $mainCategoryName,
+            'mainCategorySlug' => $mainCategorySlug,
             'subcategories' => $subcategories
         ]);
     }
