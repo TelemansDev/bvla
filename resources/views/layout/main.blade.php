@@ -13,7 +13,7 @@
     <script src="{{ mix('js/app.js') }}"></script>
 </head>
 <body>
-    <div class="container py-5">
+    <div class="container-md py-5">
         @yield('content')
     </div>
 </body>

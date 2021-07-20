@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ $subcategory->name }}</h4>
                         <h5 class="card-subtitle mb-2 text-muted">Słówek: {{ $subcategory->words->count() }}</h5>
-                        <a href="{{ route('category.subcategory.show', ['mainCategory' => $mainCategorySlug, 'subcategory' => $subcategory->slug]) }}" class="btn btn-link btn-m active text-center" role="button" aria-pressed="true">Wybierz</a>
+                        <a href="{{ route('category.subcategory.show', ['mainCategory' => $mainCategorySlug, 'subcategory' => $subcategory->slug]) }}" class="btn btn-primary btn-m active text-center" role="button" aria-pressed="true">Wybierz</a>
                     </div>
                 </div>
             </div>
