@@ -24,3 +24,6 @@ Route::get('/{mainCategory}/{subcategory}', 'Category\SubcategoryController@show
 
 Route::get('/{mainCategory}/{subcategory}/game', 'Game\GameController@index')
     ->name('game.list');
+
+Route::post('/{mainCategory}/{subcategory}/game', 'Game\GameController@check')
+    ->name('game.check');
