@@ -19,7 +19,7 @@ class SubcategoryController extends Controller
             return redirect()->route('home.list');
         }
 
-        return View('category.subcategory', [
+        return view('category.subcategory', [
             'mainCategoryName' => $mainCategory->name,
             'subcategoryName' => $subcategory->name,
             'words' => $words

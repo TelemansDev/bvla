@@ -22,7 +22,7 @@ class GameController extends Controller
             return redirect()->route('home.list');
         }
 
-        return View('game.main', [
+        return view('game.main', [
             'mainCategoryName' => $mainCategory->name,
             'subcategoryName' => $subcategory->name,
             'words' => $words
@@ -57,7 +57,7 @@ class GameController extends Controller
             next($requestWords);
         }
 
-        return View('game.result', [
+        return view('game.result', [
             'mainCategoryName' => $mainCategory->name,
             'subcategoryName' => $subcategory->name,
             'comparisonWords' => $comparisonWords,

@@ -16,7 +16,7 @@ class MainCategoryController extends Controller
         $mainCategorySlug = $mainCategory->slug;
         $subcategories = Subcategory::findMainCategory($mainCategory)->get();
 
-        return View('category.mainCategory', [
+        return view('category.mainCategory', [
             'mainCategoryName' => $mainCategoryName,
             'mainCategorySlug' => $mainCategorySlug,
             'subcategories' => $subcategories
