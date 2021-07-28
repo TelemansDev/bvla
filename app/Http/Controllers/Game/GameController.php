@@ -8,17 +8,13 @@ use App\Http\Controllers\Controller;
 use App\Models\MainCategory;
 use App\Models\Subcategory;
 use App\Models\Word;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class GameController extends Controller
 {
     public function index(MainCategory $mainCategory, Subcategory $subcategory) {
-        $words = Word::whereHas('subcategory', function(Builder $query) use ($mainCategory) {
-            $query->where('main_category_id', $mainCategory->id);
-        })
-            ->where('subcategory_id', $subcategory->id)
+        $words = Word::findMainCategoryAndSubcategory($mainCategory, $subcategory)
             ->inRandomOrder()
             ->get();
 
@@ -34,7 +30,7 @@ class GameController extends Controller
     }
 
     public function check(MainCategory $mainCategory, Subcategory $subcategory, Request $request): View {
-        $words = Word::where('subcategory_id', $subcategory->id)->get();
+        $words = Word::findSubcategory($subcategory)->get();
         $requestWords = $request->all();
         $correctWords = [];
         $comparisonWords = [];

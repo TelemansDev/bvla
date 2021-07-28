@@ -20,7 +20,7 @@
                 </div>
             @elseif ($comparisonWord['answer_user'] !== null)
                 <div class="col-sm text-left m-2 alert alert-danger">
-                    {{ $comparisonWord['answer_user'] }} / Prawidłowa odpowiedź: {{ $comparisonWord['answer_correct'] }}
+                    {{ $comparisonWord['answer_user'] }} / Prawidłowa odpowiedź to: {{ $comparisonWord['answer_correct'] }}
                 </div>
             @else
                 <div class="col-sm text-left m-2 alert alert-danger">
@@ -28,5 +28,10 @@
                 </div>
             @endif
         </div>
+
     @endforeach
+
+    <div class="text-center">
+        <a href="{{ route('home.list')  }}" class="btn btn-primary btn-lg m-4" role="button" aria-pressed="true">Zobacz inne kategorie</a>
+    </div>
 @endsection

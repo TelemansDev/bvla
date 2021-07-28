@@ -19,8 +19,16 @@ class SubcategoriesSeeder extends Seeder
                 ['name' => 'Mięso', 'slug' => 'mieso', 'main_category_id' => 2, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
                 ['name' => 'Dyscypilny', 'slug' => 'dyscypliny', 'main_category_id' => 3, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
                 ['name' => 'Piłka nożna', 'slug' => 'pilka-nozna', 'main_category_id' => 3, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
-                ['name' => 'Sport motorowy', 'slug' => 'sport-motorowy', 'main_category_id' => 3, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
+                ['name' => 'Sport motorowy', 'slug' => 'sport-motorowy', 'main_category_id' => 3, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Przedmioty szkolne', 'slug' => 'przedmioty-szkolne', 'main_category_id' => 4, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Pomieszczenia', 'slug' => 'pomieszczenia', 'main_category_id' => 4, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Osoby', 'slug' => 'osoby', 'main_category_id' => 4, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Środki transportu', 'slug' => 'srodki-transportu', 'main_category_id' => 5, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Lotnisko', 'slug' => 'lotnisko', 'main_category_id' => 5, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Domowe', 'slug' => 'domowe', 'main_category_id' => 6, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Ptaki', 'slug' => 'ptaki', 'main_category_id' => 6, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+                ['name' => 'Ryby', 'slug' => 'ryby', 'main_category_id' => 6, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
             ]
-        );       
+        );
     }
 }
